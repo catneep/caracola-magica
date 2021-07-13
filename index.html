@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Caracola Mágica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <div id="background-rays">
+    <figure id="rays">
+      <img src="img/rays.png" alt="Rays">
+    </figure>
+  </div>
+
+  <main>
+    <section class="container spaced">
+      <h1>La Caracola Mágica</h1>
+      <p>¡Haz una pregunta y presiona el botón!</p>
+    </section>
+
+    <section id="shell" class="container spaced">
+      <figure>
+        <img src="img/caracola.png" alt="Caracola">
+      </figure>
+      <dialog id="answer" class="hidden">
+        Nada.
+      </dialog>
+
+    </section>
+
+    <section class="container">
+      <button id="ask" onclick="ask()">Preguntar</button>
+    </section>
+
+  </main>
+
+  <div id="loader" class="hidden">
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </div>
+
+</body>
+</html>
