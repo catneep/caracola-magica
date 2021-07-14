@@ -1,6 +1,7 @@
 const answers = [
     "Nada.",
     "Nada.",
+    "Nada.",
     "No.",
     "Probablemente."
 ];
@@ -10,17 +11,16 @@ function ask(){
     const loader = document.getElementById("loader");
     const button = document.getElementById("ask");
     const delay = Math.floor((Math.random() * ((2200 + 1) - 1000)) + 1000);
-    const answer = answers[Math.floor((Math.random() * (3 + 1)))];
+    const answer = answers[Math.floor((Math.random() * (4 + 1)))];
 
-    //  if (dialog.classList.contains("hidden")){
-        loader.classList.remove("hidden")
+    dialog.classList.add("hidden");
+    loader.classList.remove("hidden");
 
-        setTimeout(() => {
-            dialog.classList.remove("hidden");
-            loader.classList.add("hidden")
-            button.textContent = "Intentar de nuevo";
-            dialog.innerText = answer;
+    setTimeout(() => {
+        dialog.classList.remove("hidden");
+        loader.classList.add("hidden");
+        button.textContent = "Intentar de nuevo";
+        dialog.innerText = answer;
 
-        }, delay);
-    //  }
+    }, delay);
 }

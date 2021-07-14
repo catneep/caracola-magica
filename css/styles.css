@@ -165,14 +165,45 @@ button:hover{
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 641px) {
     #shell{ padding: 0; }
 }
 
-/* Spinner */
+@media screen and (max-width: 620px) {
+    #answer{
+        width: 50%;
+        height: 10%;
+        left: 40%;
+        top: 17%;
+    }
+}
 
+@media screen and (max-width: 361px) {
+    main{
+        margin-top: 3rem;
+    }
+    #background-rays{
+        width: 150%;
+        height: 150%;
+    }
+    #loader{
+        width: 152%;
+        height: 152%;
+    }
+    #answer{
+        width: 50%;
+        height: 10%;
+        left: 40%;
+        top: 17%;
+    }
+    #shell img {
+        transform: scale(0.8);
+    }
+}
+
+/* Spinner */
 .lds-spinner {
-    color: official;
+    color: white;
     display: inline-block;
     position: relative;
     width: 80px;
