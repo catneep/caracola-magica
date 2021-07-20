@@ -24,7 +24,7 @@ body{
         "a b c"
     ;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 main{
@@ -138,13 +138,20 @@ button:hover{
     margin: 4px;
 }
 
-#info{
-    justify-content: center;
-    transform: scale(1.65) !important;
-    border-radius: 50% !important;
-    top: 1rem;
-    left: 96%;
+header{
     position: absolute;
+    display: flex;
+    width: 96%;
+    justify-content: flex-end;
+    
+    margin: 1.5rem 1.5rem 0.2rem 1.5rem;
+}
+
+#info{
+    text-align: center;
+    transform: scale(1.65) !important;
+    display: inline-block;
+    border-radius: 50% !important;
     opacity: 0.05;
 }
 
@@ -225,6 +232,17 @@ button:hover{
 }
 
 @media screen and (max-width: 361px) {
+    body{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        margin: 0;
+        /* overflow: hidden; */
+    }
+    #credits{
+        margin: 0;
+        width: 100vw;
+    }
     main{
         margin-top: 3rem;
     }
