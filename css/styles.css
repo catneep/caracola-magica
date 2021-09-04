@@ -5,7 +5,7 @@ html, body{
     top: 0;
 
     font-family: 'Otomanopee One', sans-serif;
-    
+
     background: rgb(179,237,225);
     background: -moz-radial-gradient(circle, rgba(179,237,225,1) 0%, rgba(125,212,230,1) 47%, rgba(84,147,233,1) 100%);
     background: -webkit-radial-gradient(circle, rgba(179,237,225,1) 0%, rgba(125,212,230,1) 47%, rgba(84,147,233,1) 100%);
@@ -24,7 +24,7 @@ body{
         "a b c"
     ;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 main{
@@ -49,6 +49,7 @@ p{
 
 img{
     transform: scale(0.97);
+    -webkit-transform:scale(0.97, 0.97);
 }
 
 button{
@@ -62,10 +63,12 @@ button{
     border-radius: 0.8rem;
     transition: 0.25s;
     transform: scale(2);
+    -webkit-transform:scale(2, 2);
 }
 
 button:hover{
     transform: scale(2.2);
+    -webkit-transform:scale(2.2, 2.2);
 }
 
 #background-rays{
@@ -93,7 +96,7 @@ button:hover{
     padding-right: 5rem;
 }
 
-#loader{
+#loader, #credits{
     position: absolute;
     display: flex;
     height: 100vh;
@@ -107,7 +110,7 @@ button:hover{
 }
 
 #credits{
-    position: absolute;
+    /* position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,8 +118,8 @@ button:hover{
     height: 100%;
     grid-area: b;
     z-index: 50;
+    background-color: rgba(0, 0, 0, 0.8); */
     color: white;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #credits a{
@@ -128,6 +131,7 @@ button:hover{
     text-align: center;
     text-shadow: 2px 5px 5px black;
     transform: scale(1.75);
+    -webkit-transform:scale(1.75, 1.75);
 }
 
 #credits > div > h4{
@@ -138,14 +142,22 @@ button:hover{
     margin: 4px;
 }
 
-#info{
-    justify-content: center;
-    transform: scale(1.65) !important;
-    border-radius: 50% !important;
-    top: 1rem;
-    left: 96%;
+header{
     position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    
+    margin: 1.5rem 1.5rem 0.2rem 1.5rem;
+}
+
+#info{
+    text-align: center;
+    transform: scale(1.65) !important;
+    -webkit-transform:scale(1.65, 1.65) !important;
+    display: inline-block;
+    border-radius: 50% !important;
     opacity: 0.05;
+    cursor: pointer;
 }
 
 #info:hover{
@@ -225,6 +237,34 @@ button:hover{
 }
 
 @media screen and (max-width: 361px) {
+    body{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+    header{
+        display: none;
+    }
+    #shell{
+        transform: scale(0.7);
+        -webkit-transform:scale(0.7, 0.7);
+    }
+    #ask{
+        position: absolute;
+        bottom: -3rem;
+    }
+    .container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        min-width: 120vw;
+    }
+    #credits{
+        margin: 0;
+        width: 100vw;
+    }
     main{
         margin-top: 3rem;
     }
@@ -237,13 +277,15 @@ button:hover{
         height: 152%;
     }
     #answer{
+        position: absolute;
         width: 50%;
         height: 10%;
-        left: 40%;
-        top: 17%;
+        right: 2rem;
+        top: -3rem;
     }
     #shell img {
         transform: scale(0.8);
+        -webkit-transform:scale(0.8, 0.8);
     }
 }
 
